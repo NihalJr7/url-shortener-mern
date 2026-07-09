@@ -5,7 +5,7 @@ import axios from 'axios';
  * Handles JWT token attachment and 401 responses
  */
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
   },
