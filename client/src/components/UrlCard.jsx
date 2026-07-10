@@ -15,7 +15,7 @@ import toast from 'react-hot-toast';
 /**
  * URL card component displaying link details and action buttons
  */
-const UrlCard = ({ url, onEdit, onDelete, baseUrl = 'http://localhost:5000' }) => {
+const UrlCard = ({ url, onEdit, onDelete, baseUrl = 'import.meta.env.VITE_BASE_URL' }) => {
   const [copied, setCopied] = useState(false);
   const [showQr, setShowQr] = useState(false);
 
