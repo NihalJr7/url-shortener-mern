@@ -17,6 +17,7 @@ const MyUrlsPage = lazy(() => import('./pages/MyUrlsPage.jsx'));
 const AnalyticsPage = lazy(() => import('./pages/AnalyticsPage.jsx'));
 const ProfilePage = lazy(() => import('./pages/ProfilePage.jsx'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
+const RedirectPage = lazy(() => import('./pages/RedirectPage.jsx'));
 
 /**
  * Page loading fallback
@@ -64,6 +65,9 @@ const App = () => {
                 <Route path="/analytics" element={<AnalyticsPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>
+
+              {/* Short URL Redirect Handler */}
+              <Route path="/:shortCode" element={<RedirectPage />} />
 
               {/* 404 */}
               <Route path="*" element={<NotFoundPage />} />
